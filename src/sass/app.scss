@@ -1,0 +1,145 @@
+@import './var';
+@import './overwrite';
+@import './utils/index';
+
+:root {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+}
+
+.brand {
+    color: #66f;
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+.header {
+    &__container {
+        width: 100%;
+        height: 75vh;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__photos {
+        filter: hue-rotate(15deg) brightness(1.1);
+        width: 20vw;
+        align-self: flex-end;
+    }
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    max-width: map-get($break-points, xl);
+    margin: 0 auto;
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        margin: 0 0 0 auto;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            padding: 20px 30px;
+            color: #0091ea;
+            font-family: "Poppins";
+            font-weight: 600;
+        }
+    }
+}
+
+.header-banner {
+    &__container {
+        height: 100%;
+        padding: 0 1.5rem;
+        display: grid;
+    }
+
+    &__contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title1 {
+            margin: 0;
+            font-family: "Epilogue", sans-serif;
+            font-weight: 590;
+            font-size: 3rem;
+            color: #999;
+
+            @media screen and (max-width: map-get($break-points, xl)) {
+                font-size: 1.3rem;
+            }
+        }
+
+        &__title2 {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 3.5rem;
+            color: #333;
+
+            @media screen and (max-width: map-get($break-points, xl)) {
+                font-size: 1.7rem;
+            }
+        }
+
+        &__subtitle {
+            display: flex;
+        }
+    }
+}
+
+.badge {
+    // $bg: #fff;
+    $bg: #50d1ef;
+
+    cursor: pointer;
+    margin: 10px;
+    padding: .25em 1em;
+    padding: .35em 1.3em;
+    background-color: $bg;
+    color: #fff;
+    font-weight: 300;
+    border-radius: 100px;
+    box-shadow: 5px 5px 20px 1.5px #0002;
+    // box-shadow: 0 0 0 0.5px #0001, 5px 5px 20px 2px #0002;
+
+    &:hover {
+        background-color: darken($bg, 15%);
+    }
+}
+
+main {
+    section:not(:last-child) {
+        margin-bottom: 75px;
+    }
+}
+
+.home-section-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+    
+    &__title {
+        margin: 1em 1.6em;
+        color: #333;
+        font-size: 1.7rem;
+    }
+    
+    &__contents {
+        padding: 0 40px 20px;
+    }
+}
+
+footer {
+    margin-top: 10vh;
+}
