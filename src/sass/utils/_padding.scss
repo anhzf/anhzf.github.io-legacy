@@ -1,0 +1,39 @@
+$space: (
+    'sm': .35rem,
+    'md': .65rem,
+    'lg': 1rem,
+    'xl': 1.4rem,
+    'xxl': 1.9rem,
+);
+
+$props: (
+    'p': 'padding',
+    'm': 'margin'
+);
+
+// Iterate every space breakpoint
+@each $size, $numb in $space {
+    // Iterate every Props
+    @each $className, $attrName in $props {
+        // Iterate every detailed attribute name
+        @each $depthClass, $depthAttr in ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left') {
+            .#{$className}-#{$depthClass}-#{$size} {
+                #{$attrName}-#{$depthAttr}: $numb;
+            }
+        }
+        .#{$className}-x-#{$size} {
+            #{$attrName}-right: $numb;
+            #{$attrName}-left: $numb;
+        }
+        .#{$className}-y-#{$size} {
+            #{$attrName}-top: $numb;
+            #{$attrName}-bottom: $numb;
+        }
+        .#{$className}-#{$size} {
+            #{$attrName}-top: $numb;
+            #{$attrName}-right: $numb;
+            #{$attrName}-bottom: $numb;
+            #{$attrName}-left: $numb;
+        }
+    }
+}

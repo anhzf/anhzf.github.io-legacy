@@ -1,8 +1,29 @@
-.grid {
+%grid {
     display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
     grid-column-gap: 1.5rem;
     max-width: 100%;
+}
+
+.grid {
+    @extend %grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    
+    &-10 {
+        @extend %grid;
+        grid-template-columns: repeat(10, minmax(0, 1fr));
+    }
+    &-8 {
+        @extend %grid;
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+    &-6 {
+        @extend %grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+    &-4 {
+        @extend %grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 
     &\:col-span {
         &-2 {
