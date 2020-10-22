@@ -1,18 +1,15 @@
 import React from 'react';
-import TheHeader from './components/TheHeader';
-import TheMain from './components/TheMain';
+import TheHeader from './components/TheHeader/index';
+import TheMain from './components/TheMain/index';
 
-function App(): JSX.Element {
+export default function App(): JSX.Element {
   return (
     <div className="App">
-      <TheHeader/>
-      <TheMain/>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header> */}
+      <TheHeader
+        heroImg={require('./assets/img/my-removebg-preview.png')}
+      />
 
+      <TheMain />
     </div>
   );
 }
-
-export default App;
