@@ -1,10 +1,5 @@
 import * as React from 'react';
 
-interface ContentListItemProps {
-    content: JSX.Element | string;
-    link: string;
-}
-
 interface ActionProps {
     text: string;
     action: Function | string;
@@ -13,6 +8,11 @@ interface ActionProps {
 
 interface ActionsProps {
     children?: JSX.Element;
+}
+
+interface ContentListItemProps {
+    content: JSX.Element | string;
+    link: string;
 }
 
 interface ContentListProps {
