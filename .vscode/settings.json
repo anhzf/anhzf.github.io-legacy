@@ -1,5 +1,9 @@
 {
     "editor.codeActionsOnSave": {
         "source.fixAll": true
-    }
+    },
+    "liveServer.settings.root": "/build",
+    "conventionalCommits.scopes": [
+        "IDE"
+    ],
 }
