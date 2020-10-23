@@ -11,8 +11,8 @@ interface ActionsProps {
 }
 
 interface ContentListItemProps {
-    content: JSX.Element | string;
-    link: string;
+    content: string;
+    [index: string]: any;
 }
 
 interface ContentListProps {
@@ -58,8 +58,7 @@ export function ContentList({
         <ul className="featured__container">
             {items.map((project, i) => (
                 <ContentListItem
-                    content={project.content}
-                    link={project.link}
+                    {...project}
                     key={`ContentListItem_${i}`}
                 />
             ))}
@@ -68,11 +67,11 @@ export function ContentList({
 }
 
 export function ContentListItem({
-    content, link
+    content, ...attrs
 }: ContentListItemProps): JSX.Element {
     return (
         <li className="featured__item">
-            <a href={link}>{content}</a>
+            <a {...attrs}>{content}</a>
         </li>
     )
 }

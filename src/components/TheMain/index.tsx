@@ -6,17 +6,17 @@ export default function TheMain() {
     const featuredProjects = [
         {
             content: 'Lakukampus',
-            link: 'https://lakukampus.id'
+            href: 'https://lakukampus.id'
         },
         {
             content: 'Code Highlighter',
-            link: './'
+            href: 'https://anh-code-highlighter.web.app/'
         },
         {
             content: 'Laravel RestAPI',
-            link: './'
+            href: 'https://packagist.org/packages/anhzf/laravel-rest-api',
         },
-    ]
+    ].map(v => ({...v, target: '_blank'}))
 
     return (
         <main className="grid">
