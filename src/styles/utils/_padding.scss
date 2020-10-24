@@ -1,14 +1,15 @@
 $space: (
-    'sm': .35rem,
-    'md': .65rem,
-    'lg': 1rem,
-    'xl': 1.4rem,
-    'xxl': 1.9rem,
+    "sm": 0.35rem,
+    "md": 0.65rem,
+    "lg": 1rem,
+    "xl": 1.4rem,
+    "xxl": 1.9rem,
 );
 
+// [className]: [propName]
 $props: (
-    'p': 'padding',
-    'm': 'margin'
+    "p": "padding",
+    "m": "margin",
 );
 
 // Iterate every space breakpoint
@@ -16,20 +17,23 @@ $props: (
     // Iterate every Props
     @each $className, $attrName in $props {
         // Iterate every detailed attribute name
-        @each $depthClass, $depthAttr in ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left') {
-            .#{$className}-#{$depthClass}-#{$size} {
+        @each $depthClass, $depthAttr in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
+            @include generateBreakPointStyleClasses("#{$className}-#{$depthClass}-#{$size}") {
                 #{$attrName}-#{$depthAttr}: $numb;
             }
         }
-        .#{$className}-x-#{$size} {
+
+        @include generateBreakPointStyleClasses("#{$className}-x-#{$size}") {
             #{$attrName}-right: $numb;
             #{$attrName}-left: $numb;
         }
-        .#{$className}-y-#{$size} {
+
+        @include generateBreakPointStyleClasses("#{$className}-y-#{$size}") {
             #{$attrName}-top: $numb;
             #{$attrName}-bottom: $numb;
         }
-        .#{$className}-#{$size} {
+
+        @include generateBreakPointStyleClasses("#{$className}-#{$size}") {
             #{$attrName}-top: $numb;
             #{$attrName}-right: $numb;
             #{$attrName}-bottom: $numb;

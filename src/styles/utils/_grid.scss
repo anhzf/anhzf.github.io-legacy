@@ -1,165 +1,40 @@
-%grid {
+@mixin gridBaseStyle {
     display: grid;
     grid-column-gap: 1.5rem;
     max-width: 100%;
 }
 
-.grid {
-    @extend %grid;
+$baseClassName: "grid";
+$gridColLayouts: 4, 6, 8, 10, 12;
+$gridSpanSizes: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$gridStartNumber: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11;
+
+.#{$baseClassName} {
+    @include gridBaseStyle;
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    
-    &-10 {
-        @extend %grid;
-        grid-template-columns: repeat(10, minmax(0, 1fr));
-    }
-    &-8 {
-        @extend %grid;
-        grid-template-columns: repeat(8, minmax(0, 1fr));
-    }
-    &-6 {
-        @extend %grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-    }
-    &-4 {
-        @extend %grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+}
 
-    &\:col-span {
-        &-2 {
-            grid-column: span 2 / span 2;
-        }
-        &-3 {
-            grid-column: span 3 / span 3;
-        }
-        &-4 {
-            grid-column: span 4 / span 4;
-        }
-        &-5 {
-            grid-column: span 5 / span 5;
-        }
-        &-6 {
-            grid-column: span 6 / span 6;
-        }
-        &-7 {
-            grid-column: span 7 / span 7;
-        }
-        &-8 {
-            grid-column: span 8 / span 8;
-        }
-        &-9 {
-            grid-column: span 9 / span 9;
-        }
-        &-10 {
-            grid-column: span 10 / span 10;
-        }
-        &-11 {
-            grid-column: span 11 / span 11;
-        }
+@each $colLayout in $gridColLayouts {
+    @include generateBreakPointStyleClasses("#{$baseClassName}-#{$colLayout}") {
+        @include gridBaseStyle;
+        grid-template-columns: repeat($colLayout, minmax(0, 1fr));
     }
+}
 
-    &\:col-start {
-        &-1 {
-            grid-column-start: 1;
-        }
-        &-2 {
-            grid-column-start: 2;
-        }
-        &-3 {
-            grid-column-start: 3;
-        }
-        &-4 {
-            grid-column-start: 4;
-        }
-        &-5 {
-            grid-column-start: 5;
-        }
-        &-6 {
-            grid-column-start: 6;
-        }
-        &-7 {
-            grid-column-start: 7;
-        }
-        &-8 {
-            grid-column-start: 8;
-        }
-        &-9 {
-            grid-column-start: 9;
-        }
-        &-10 {
-            grid-column-start: 10;
-        }
-        &-11 {
-            grid-column-start: 11;
-        }
+@each $spanSize in $gridSpanSizes {
+    @include generateBreakPointStyleClasses("#{$baseClassName}\\:col-span-#{$spanSize}") {
+        grid-column: span $spanSize / span $spanSize;
     }
-
-    &\:row-span {
-        &-2 {
-            grid-row: span 2 / span 2;
-        }
-        &-3 {
-            grid-row: span 3 / span 3;
-        }
-        &-4 {
-            grid-row: span 4 / span 4;
-        }
-        &-5 {
-            grid-row: span 5 / span 5;
-        }
-        &-6 {
-            grid-row: span 6 / span 6;
-        }
-        &-7 {
-            grid-row: span 7 / span 7;
-        }
-        &-8 {
-            grid-row: span 8 / span 8;
-        }
-        &-9 {
-            grid-row: span 9 / span 9;
-        }
-        &-10 {
-            grid-row: span 10 / span 10;
-        }
-        &-11 {
-            grid-row: span 11 / span 11;
-        }
+    @include generateBreakPointStyleClasses("#{$baseClassName}\\:row-span-#{$spanSize}") {
+        grid-row: span $spanSize / span $spanSize;
     }
+}
 
-    &\:row-start {
-        &-1 {
-            grid-row-start: 1;
-        }
-        &-2 {
-            grid-row-start: 2;
-        }
-        &-3 {
-            grid-row-start: 3;
-        }
-        &-4 {
-            grid-row-start: 4;
-        }
-        &-5 {
-            grid-row-start: 5;
-        }
-        &-6 {
-            grid-row-start: 6;
-        }
-        &-7 {
-            grid-row-start: 7;
-        }
-        &-8 {
-            grid-row-start: 8;
-        }
-        &-9 {
-            grid-row-start: 9;
-        }
-        &-10 {
-            grid-row-start: 10;
-        }
-        &-11 {
-            grid-row-start: 11;
-        }
+@each $startNumb in $gridStartNumber {
+    @include generateBreakPointStyleClasses("#{$baseClassName}\\:col-start-#{$startNumb}") {
+        grid-column-start: $startNumb;
+    }
+    @include generateBreakPointStyleClasses("#{$baseClassName}\\:row-start-#{$startNumb}") {
+        grid-row-start: $startNumb;
     }
 }

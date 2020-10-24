@@ -1,0 +1,13 @@
+@mixin generateBreakPointStyleClasses($className) {
+    .#{$className} {
+        @content;
+    }
+
+    @each $bpClassName, $bp in $break-points {
+        @media (max-width: $bp) {
+            .#{$bpClassName}\:#{$className} {
+                @content;
+            }
+        }
+    }
+}
