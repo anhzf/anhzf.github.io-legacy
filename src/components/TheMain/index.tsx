@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeSectionCard, * as HSC from './homeSectionCard';
-
+import './style.scss';
 
 export default function TheMain() {
     const featuredProjects = [

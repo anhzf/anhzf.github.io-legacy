@@ -1,5 +1,6 @@
 import * as React from 'react';
 import NavItems, { navItem } from './navItems';
+import './style.scss';
 
 interface TheHeaderProps {
     heroImg: string;

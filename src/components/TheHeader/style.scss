@@ -1,0 +1,107 @@
+@import 'src/styles/var';
+
+.header {
+    width: 100%;
+    height: 75vh;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    &__photos {
+        filter: hue-rotate(15deg) brightness(1.1);
+        width: 20vw;
+        align-self: flex-end;
+    }
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    max-width: map-get($break-points, lg);
+    margin: 0 auto;
+    padding: 0 2em;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        margin: 0 0 0 auto;
+        height: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            padding: 20px 30px;
+            // color: #0091ea;
+            color: #2ba8f5;
+            font-family: "Poppins";
+            // font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(1em + 30px);
+            left: 20px;
+            width: calc(0% - 40px);
+            height: 4px;
+            background-color: #1499ea;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            &::after {
+                width: calc(100% - 40px);
+            }
+        }
+    }
+}
+
+.header-banner {
+    &__container {
+        height: 100%;
+        padding: 0 1.5rem;
+        display: grid;
+    }
+
+    &__contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title1 {
+            margin: 0;
+            font-family: "Epilogue", sans-serif;
+            font-weight: 590;
+            font-size: 3rem;
+            color: #999;
+
+            @media screen and (max-width: map-get($break-points, lg)) {
+                font-size: 1.3rem;
+            }
+        }
+
+        &__title2 {
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 3.5rem;
+            color: #333;
+
+            @media screen and (max-width: map-get($break-points, lg)) {
+                font-size: 1.7rem;
+            }
+        }
+
+        &__subtitle {
+            display: flex;
+        }
+    }
+}
