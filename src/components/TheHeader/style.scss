@@ -102,6 +102,30 @@
 
         &__subtitle {
             display: flex;
+            flex-wrap: wrap;
         }
+    }
+}
+
+.badge {
+    $bg: #50d1ef;
+
+    cursor: pointer;
+    margin: 10px;
+    padding: 0.25em 1em;
+    padding: 0.35em 1.3em;
+    background-color: $bg;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 100px;
+    box-shadow: 5px 5px 20px 1.5px rgba(darken($bg, 65%), .2);
+
+    &:hover {
+        background-color: darken($bg, 15%);
+    }
+
+    @media (max-width: map-get($break-points, lg)) {
+        font-size: .9rem;
     }
 }

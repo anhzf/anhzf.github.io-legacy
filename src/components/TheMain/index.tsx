@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeSectionCard, * as HSC from './homeSectionCard';
 import './style.scss';
+import C, { ActionBtnModifier } from './classes';
 
 export default function TheMain() {
     const featuredProjects = [
@@ -19,30 +20,23 @@ export default function TheMain() {
     ].map(v => ({...v, target: '_blank'}))
 
     return (
-        <main className="grid">
-            <section id="projects" className="grid:col-start-2 grid:col-span-10 grid-6">
+        <main className={C.main} /* className="grid" */>
+            <section id="projects" className={C.section} /* className="grid:col-start-2 grid:col-span-10 grid-6" */>
                 <HomeSectionCard
                     title="Featured Projects"
-                    actions={(
-                        <HSC.Action text="See other projects" type="strong" action="./" />
-                    )}
+                    colSpan={4}
+                    actions={(<>
+                        <HSC.Action text="See other projects" type={ActionBtnModifier.medium} action="./" />
+                        <HSC.Action text="Visit Github Profile" type={ActionBtnModifier.strong} action="https://github.com/anhzf" externalLink />
+                    </>)}
                 >
                     <HSC.ContentList items={featuredProjects} />
                 </HomeSectionCard>
-
-                <HomeSectionCard
-                    title="Most Starred on Github"
-                    actions={(<>
-                        <HSC.Action text="See more" action="./" />
-                        <HSC.Action text="Visit github" type="strong" action="./" />
-                    </>)}
-                />
             </section>
 
-            <section id="skills-and-experience" className="grid:col-start-2 grid:col-span-10 grid">
+            <section id="skills-and-experience" className={C.section} /* className="grid:col-start-2 grid:col-span-10 grid" */>
                 <HomeSectionCard
                     title="Skills"
-                    colSpan={5}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, nam dolores non libero officiis
                     earum dolorem ratione, quo sunt suscipit, eaque eos sit distinctio beatae debitis voluptas velit rem
@@ -55,8 +49,6 @@ export default function TheMain() {
                 </HomeSectionCard>
                 <HomeSectionCard
                     title="Experience"
-                    colSpan={5}
-                    colStart={8}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, nam dolores non libero officiis
                     earum dolorem ratione, quo sunt suscipit, eaque eos sit distinctio beatae debitis voluptas velit rem
@@ -69,8 +61,8 @@ export default function TheMain() {
                 </HomeSectionCard>
             </section>
 
-            <section className="grid:col-start-2 grid:col-span-10">
-                <h1 className="home-section-card__title">Top Web Technologies Used</h1>
+            <section className={C.section} /* className="grid:col-start-2 grid:col-span-10" */>
+                <h1 className={C.homeSectionCard__title} /* className="home-section-card__title" */>Top Web Technologies Used</h1>
                 <div className="home-section-card__contents featured" draggable="true">
                     <div className="featured__item">
                         <img src={require('../../assets/img/logo/quasar-logo.svg')} alt="" />
@@ -93,10 +85,10 @@ export default function TheMain() {
                 </div>
             </section>
 
-            <section className="grid:col-start-2 grid:col-span-10 grid">
+            <section className={C.section} /* className="grid:col-start-2 grid:col-span-10 grid" */>
                 <HomeSectionCard
                     title="Organizations"
-                    colSpan={7}
+                    colSpan={4}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta autem deleniti consequatur
                     sunt perspiciatis, sapiente minima a ad necessitatibus officiis voluptate nesciunt nemo aperiam
@@ -109,10 +101,10 @@ export default function TheMain() {
                 </HomeSectionCard>
             </section>
 
-            <section id="education" className="grid:col-start-4 grid:col-span-10 grid">
+            <section id="education" className={C.section} /* className="grid:col-start-4 grid:col-span-10 grid" */>
                 <HomeSectionCard
                     title="Education"
-                    colSpan={7}
+                    colSpan={4}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta autem deleniti consequatur
                     sunt perspiciatis, sapiente minima a ad necessitatibus officiis voluptate nesciunt nemo aperiam

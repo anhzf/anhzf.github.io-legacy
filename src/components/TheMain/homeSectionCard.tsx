@@ -1,9 +1,14 @@
 import * as React from 'react';
+import C, { ActionBtnModifier } from './classes';
+import { joinClass } from '../../utils';
+import { ExternalLink } from '../icons';
 
 interface ActionProps {
     text: string;
     action: Function | string;
-    type?: 'strong' | 'default';
+    // type?: 'strong' | 'default';
+    type?: ActionBtnModifier;
+    externalLink?: Boolean;
 }
 
 interface ActionsProps {
@@ -31,16 +36,17 @@ interface homeSectionCardProps {
 export default function HomeSectionCard({
     title, children = '', actions, colSpan = 3, colStart = 0
 }: homeSectionCardProps): JSX.Element {
-    const baseClass = 'home-section-card';
-    const gridColSpan = `grid:col-span-${colSpan}`;
-    const gridColStart = colStart && `grid:col-start-${colStart}`;
+    // const baseClass = 'home-section-card';
+    const baseClass = C.homeSectionCard;
+    const gridColSpan = `col-span-${colSpan}`;
+    const gridColStart = colStart && `col-start-${colStart}`;
     const classes = [baseClass, 'p-b-xl', gridColStart, gridColSpan].join(' ');
 
 
     return (
         <div className={classes}>
-            <h1 className="home-section-card__title">{title}</h1>
-            <div className="home-section-card__contents">
+            <h1 className={C.homeSectionCard__title} /* className="home-section-card__title" */>{title}</h1>
+            <div className={C.homeSectionCard__content} /* className="home-section-card__contents" */>
                 {children}
             </div>
 
@@ -55,7 +61,7 @@ export function ContentList({
     items
 }: ContentListProps): JSX.Element {
     return (
-        <ul className="featured__container">
+        <ul className={C.homeSectionCard__content__list} /* className="featured__container" */>
             {items.map((project, i) => (
                 <ContentListItem
                     {...project}
@@ -69,9 +75,12 @@ export function ContentList({
 export function ContentListItem({
     content, ...attrs
 }: ContentListItemProps): JSX.Element {
+    const baseClass = 'block';
+    const mergedAttrs = {...attrs, className: joinClass(attrs.class, baseClass)};
+
     return (
-        <li className="featured__item">
-            <a {...attrs}>{content}</a>
+        <li className={C.homeSectionCard__content__list__item} /* className="featured__item" */>
+            <a {...mergedAttrs}>{content}</a>
         </li>
     )
 }
@@ -80,25 +89,31 @@ export function Actions({
     children
 }: ActionsProps): JSX.Element {
     return (
-        <div className="home-section-card__action__container">
+        <div className={C.homeSectionCard__action} /* className="home-section-card__action__container" */>
             {children}
         </div>
     )
 }
 
 export function Action({
-    text, action, type
+    text, action, type = ActionBtnModifier.default, externalLink = false
 }: ActionProps): JSX.Element {
-    const baseClass = 'home-section-card__action';
-    const modifier = !type ? '' : `${baseClass}--${type}`;
-    const className = [baseClass, modifier].join(' ');
-    const clickInteract =
+    // const baseClass = 'homeSectionCard__action';
+    const baseClass = C.homeSectionCard__action__btn;
+    // const modifier = !type ? '' : `${baseClass}--${type}`;
+    // const modifier = `${baseClass}--${type}`;
+    const className = [baseClass, type].join(' ');
+
+    const clickInteraction =
         typeof action === 'string' ?
             { href: action } : { onClick: action };
 
     return React.createElement(
         'a',
-        { className, ...clickInteract },
-        text
+        { className, ...clickInteraction },
+        (<>
+            {text}
+            { externalLink && <ExternalLink className="inline-block ml-1 h-4" /> }
+        </>)
     );
 }
