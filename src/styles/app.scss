@@ -1,41 +1,24 @@
-@import "./var";
-@import "./mixins";
-@import "./overwrite";
+@import "tailwindcss/base";
+@import "tailwindcss/utilities";
+// @import "./var";
+// @import "./mixins";
+// @import "./overwrite";
 
-:root {
-    @extend .sans-serif;
-    transition: 0.3s ease;
-}
+// :root {
+//     @extend .sans-serif;
+//     transition: 0.3s ease;
+// }
 
-.brand {
-    color: #66f;
-    font-family: "Montserrat";
-    font-weight: 800;
-    font-size: xx-large;
-}
+// .brand {
+//     color: #66f;
+//     font-family: "Montserrat";
+//     font-weight: 800;
+//     font-size: xx-large;
+//     // @apply font-extrabold text-4xl;
+// }
 
-.badge {
-    // $bg: #fff;
-    $bg: #50d1ef;
+// footer {
+//     margin-top: 10vh;
+// }
 
-    cursor: pointer;
-    margin: 10px;
-    padding: 0.25em 1em;
-    padding: 0.35em 1.3em;
-    background-color: $bg;
-    color: #fff;
-    font-weight: 300;
-    border-radius: 100px;
-    box-shadow: 5px 5px 20px 1.5px #0002;
-    // box-shadow: 0 0 0 0.5px #0001, 5px 5px 20px 2px #0002;
-
-    &:hover {
-        background-color: darken($bg, 15%);
-    }
-}
-
-footer {
-    margin-top: 10vh;
-}
-
-@import "./utils/index";
+// @import "./utils/index";
