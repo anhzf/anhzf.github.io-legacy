@@ -20,8 +20,8 @@ export default function TheMain() {
     ].map(v => ({...v, target: '_blank'}))
 
     return (
-        <main className={C.main} /* className="grid" */>
-            <section id="projects" className={C.section} /* className="grid:col-start-2 grid:col-span-10 grid-6" */>
+        <main className={C.main}>
+            <section id="projects" className={C.section}>
                 <HomeSectionCard
                     title="Featured Projects"
                     colSpan={4}
@@ -34,7 +34,7 @@ export default function TheMain() {
                 </HomeSectionCard>
             </section>
 
-            <section id="skills-and-experience" className={C.section} /* className="grid:col-start-2 grid:col-span-10 grid" */>
+            <section id="skills-and-experience" className={C.section}>
                 <HomeSectionCard
                     title="Skills"
                 >
@@ -61,8 +61,8 @@ export default function TheMain() {
                 </HomeSectionCard>
             </section>
 
-            <section className={C.section} /* className="grid:col-start-2 grid:col-span-10" */>
-                <h1 className={C.homeSectionCard__title} /* className="home-section-card__title" */>Top Web Technologies Used</h1>
+            <section className={C.section}>
+                <h1 className={C.homeSectionCard__title}>Top Web Technologies Used</h1>
                 <div className="home-section-card__contents featured" draggable="true">
                     <div className="featured__item">
                         <img src={require('../../assets/img/logo/quasar-logo.svg')} alt="" />
@@ -85,7 +85,7 @@ export default function TheMain() {
                 </div>
             </section>
 
-            <section className={C.section} /* className="grid:col-start-2 grid:col-span-10 grid" */>
+            <section className={C.section}>
                 <HomeSectionCard
                     title="Organizations"
                     colSpan={4}
@@ -101,7 +101,7 @@ export default function TheMain() {
                 </HomeSectionCard>
             </section>
 
-            <section id="education" className={C.section} /* className="grid:col-start-4 grid:col-span-10 grid" */>
+            <section id="education" className={C.section}>
                 <HomeSectionCard
                     title="Education"
                     colSpan={4}

@@ -14,10 +14,10 @@ export default function navItems({
     items
 }: navItemsProps) {
     return (
-        <ul className={C.navbar__container} /* className="navbar__container" */>
+        <ul className={C.navbar__container}>
             {items.map((item, i) => (
 
-                <a href={item.target} className={C.navbar__item} /* className="navbar__item" */ key={i}>
+                <a href={item.target} className={C.navbar__item} key={i}>
                     <li>{ item.title }</li>
                 </a>
 

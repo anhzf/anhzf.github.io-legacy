@@ -36,7 +36,7 @@ interface homeSectionCardProps {
 export default function HomeSectionCard({
     title, children = '', actions, colSpan = 3, colStart = 0
 }: homeSectionCardProps): JSX.Element {
-    // const baseClass = 'home-section-card';
+
     const baseClass = C.homeSectionCard;
     const gridColSpan = `col-span-${colSpan}`;
     const gridColStart = colStart && `col-start-${colStart}`;
@@ -45,8 +45,8 @@ export default function HomeSectionCard({
 
     return (
         <div className={classes}>
-            <h1 className={C.homeSectionCard__title} /* className="home-section-card__title" */>{title}</h1>
-            <div className={C.homeSectionCard__content} /* className="home-section-card__contents" */>
+            <h1 className={C.homeSectionCard__title}>{title}</h1>
+            <div className={C.homeSectionCard__content}>
                 {children}
             </div>
 
@@ -61,7 +61,7 @@ export function ContentList({
     items
 }: ContentListProps): JSX.Element {
     return (
-        <ul className={C.homeSectionCard__content__list} /* className="featured__container" */>
+        <ul className={C.homeSectionCard__content__list}>
             {items.map((project, i) => (
                 <ContentListItem
                     {...project}
@@ -79,7 +79,7 @@ export function ContentListItem({
     const mergedAttrs = {...attrs, className: joinClass(attrs.class, baseClass)};
 
     return (
-        <li className={C.homeSectionCard__content__list__item} /* className="featured__item" */>
+        <li className={C.homeSectionCard__content__list__item}>
             <a {...mergedAttrs}>{content}</a>
         </li>
     )
@@ -89,7 +89,7 @@ export function Actions({
     children
 }: ActionsProps): JSX.Element {
     return (
-        <div className={C.homeSectionCard__action} /* className="home-section-card__action__container" */>
+        <div className={C.homeSectionCard__action}>
             {children}
         </div>
     )
@@ -98,10 +98,7 @@ export function Actions({
 export function Action({
     text, action, type = ActionBtnModifier.default, externalLink = false
 }: ActionProps): JSX.Element {
-    // const baseClass = 'homeSectionCard__action';
     const baseClass = C.homeSectionCard__action__btn;
-    // const modifier = !type ? '' : `${baseClass}--${type}`;
-    // const modifier = `${baseClass}--${type}`;
     const className = [baseClass, type].join(' ');
 
     const clickInteraction =
