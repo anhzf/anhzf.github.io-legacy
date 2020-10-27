@@ -6,13 +6,21 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [
-    './src/**/*.html',
-    './src/**/*.tsx',
-    './src/**/*.tsx',
-    './src/**/*.jsx',
-    './src/**/*.js',
-  ],
+  purge: {
+    enabled: true,
+    content: [
+      './src/**/*.html',
+      './src/**/*.tsx',
+      './src/**/*.ts',
+      './src/**/*.jsx',
+      './src/**/*.js',
+    ],
+    options: {
+      whitelist: [
+        ...require('./src/classes'),
+      ]
+    }
+  },
   target: 'relaxed',
   prefix: '',
   important: false,
@@ -838,6 +846,13 @@ module.exports = {
     transitionDelay: ['responsive'],
     animation: ['responsive'],
   },
-  corePlugins: {},
+  corePlugins: {
+    gridColumn: true,
+    gridColumnStart: true,
+    gridColumnEnd: true,
+    gridRow: true,
+    gridRowStart: true,
+    gridRowEnd: true,
+  },
   plugins: [],
 }

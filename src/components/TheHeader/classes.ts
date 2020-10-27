@@ -1,4 +1,6 @@
-export default {
+const classStyle : {
+    [key: string]: string
+} = {
     header: 'w-full px-6 flex flex-col',
     
     navbar: 'w-full max-w-screen-lg my-0 mx-auto px-8 flex items-center',
@@ -15,5 +17,6 @@ export default {
     headerBanner__content__title1: 'm-0 font-epilogue font-medium text-4xl text-gray-500',
     headerBanner__content__title2: 'm-0 font-montserrat font-bold text-5xl text-gray-800',
     headerBanner__content__subtitle: 'flex flex-wrap',
-
 }
+
+export default classStyle;

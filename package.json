@@ -23,6 +23,7 @@
     "cr:start": "craco start",
     "cr:build": "craco build",
     "cr:test": "craco test",
+    "serve": "serve -s build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "serve": "^11.3.2"
   }
 }
