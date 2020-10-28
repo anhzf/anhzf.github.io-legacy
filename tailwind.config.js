@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 const architectBg = 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'199\' viewBox=\'0 0 100 199\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z\'%3E%3C/path%3E%3C/g%3E%3C/svg%3E")';
 
 module.exports = {
@@ -294,6 +295,7 @@ module.exports = {
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
       montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
+      roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
       poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
       epilogue: ['Epilogue', ...defaultTheme.fontFamily.sans],
     },
@@ -854,5 +856,30 @@ module.exports = {
     gridRowStart: true,
     gridRowEnd: true,
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities, theme }) {
+      const textIndent = Object.values(theme('spacing')).reduce((classes, space, index) => {
+        classes[`.indent-${index}`] = {
+          textIndent: space,
+        };
+        return classes;
+      }, {});
+
+      const lineClamp = [...Array(3)].reduce((classes, v, index) => {
+        const maxLine = index + 1;
+        
+        classes[`.line-clamp-${maxLine}`] = {
+          display: '-webkit-box',
+          overflow: 'hidden',
+          '-webkit-box-orient': 'vertical',
+          '-webkit-line-clamp': String(maxLine),
+        };
+
+        return classes;
+      }, {});
+
+      addUtilities(textIndent, ['responsive']);
+      addUtilities(lineClamp, ['responsive']);
+    })
+  ],
 }
