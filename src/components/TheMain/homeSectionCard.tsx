@@ -1,12 +1,11 @@
 import * as React from 'react';
 import C, { ActionBtnModifier } from './classes';
 import { joinClass } from '../../utils';
-import { ExternalLink } from '../icons';
+import * as Icon from '../icons';
 
 interface ActionProps {
     text: string;
     action: Function | string;
-    // type?: 'strong' | 'default';
     type?: ActionBtnModifier;
     externalLink?: Boolean;
 }
@@ -75,12 +74,25 @@ export function ContentList({
 export function ContentListItem({
     content, ...attrs
 }: ContentListItemProps): JSX.Element {
-    const baseClass = 'block';
-    const mergedAttrs = {...attrs, className: joinClass(attrs.class, baseClass)};
+    const baseClass = C.homeSectionCard__content__list__item__content;
+    const mergedAttrs = { ...attrs, className: joinClass(attrs.class, baseClass) };
 
     return (
         <li className={C.homeSectionCard__content__list__item}>
-            <a {...mergedAttrs}>{content}</a>
+            <article {...mergedAttrs}>
+                <h3 className={C.homeSectionCard__content__list__item__title}>{content}</h3>
+                <p className={C.homeSectionCard__content__list__item__desc}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas voluptatem facilis eos voluptate accusamus doloremque dignissimos laboriosam voluptatibus, ullam nesciunt.
+                </p>
+            </article>
+            <div className={C.homeSectionCard__content__list__item__action}>
+                <div className={C.homeSectionCard__content__list__item__action__btn} title="View Code">
+                    <Icon.Code className={C.homeSectionCard__content__list__item__action__icon}/>
+                </div>
+                <div className={C.homeSectionCard__content__list__item__action__btn} title="View Demo">
+                    <Icon.ExternalLink className={C.homeSectionCard__content__list__item__action__icon}/>
+                </div>
+            </div>
         </li>
     )
 }
@@ -106,11 +118,17 @@ export function Action({
             { href: action } : { onClick: action };
 
     return React.createElement(
-        'a',
-        { className, ...clickInteraction },
+        typeof action === 'string' ?
+            'a' : 'button',
+        {
+            className,
+            ...(externalLink ?
+                { ...clickInteraction, target: '_blank' } : clickInteraction
+            )
+        },
         (<>
             {text}
-            { externalLink && <ExternalLink className="inline-block ml-1 h-4" /> }
+            { externalLink && <Icon.ExternalLink className="inline-block ml-1 h-4" />}
         </>)
     );
 }
