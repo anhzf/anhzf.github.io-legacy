@@ -1,6 +1,5 @@
 import React from 'react';
 import HomeSectionCard, * as HSC from './homeSectionCard';
-// import './style.scss';
 import C, { ActionBtnModifier } from './classes';
 
 export default function TheMain() {

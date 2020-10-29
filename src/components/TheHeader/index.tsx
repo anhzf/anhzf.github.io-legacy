@@ -1,6 +1,5 @@
 import * as React from 'react';
 import NavItems, { navItem } from './navItems';
-// import './style.scss';
 import C from './classes';
 
 interface TheHeaderProps {
