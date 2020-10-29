@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     style: {
         postcss: {
@@ -5,5 +7,11 @@ module.exports = {
                 require('tailwindcss')('./tailwind.config.js'),
             ],
         }
-    }
+    },
+    webpack: {
+        alias: {
+            '@': path.resolve(__dirname, 'src/'),
+        },
+        plugins: [],
+    },
 }

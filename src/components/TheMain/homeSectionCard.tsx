@@ -1,7 +1,7 @@
 import * as React from 'react';
 import C, { ActionBtnModifier } from './classes';
-import { joinClass } from '../../utils';
-import * as Icon from '../icons';
+import { joinClass } from '@/utils';
+import * as Icon from '@/components/icons';
 
 interface ActionProps {
     text: string;
