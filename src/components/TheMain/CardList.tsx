@@ -21,7 +21,7 @@ export default function CardList({
     items
 }: CardListProps): JSX.Element {
     return (
-        <ul className={C.homeSectionCard__content__list}>
+        <ul className={C.cardList}>
             {items.map((project, i) => (
                 <CardListItem
                     {...project}
@@ -35,26 +35,26 @@ export default function CardList({
 export function CardListItem({
     title, desc, codeLink, demoLink, ...attrs
 }: CardListItemProps): JSX.Element {
-    const baseClass = C.homeSectionCard__content__list__item__content;
+    const baseClass = C.cardList__item__content;
     const mergedAttrs = { ...attrs, className: joinClass(attrs.class, baseClass) };
 
     return (
-        <li className={C.homeSectionCard__content__list__item}>
+        <li className={C.cardList__item}>
             <article {...mergedAttrs}>
-                <h3 className={C.homeSectionCard__content__list__item__title}>{title}</h3>
-                <p className={C.homeSectionCard__content__list__item__desc}>
+                <h3 className={C.cardList__item__title}>{title}</h3>
+                <p className={C.cardList__item__desc}>
                     {desc}
                 </p>
             </article>
-            <div className={C.homeSectionCard__content__list__item__action}>
+            <div className={C.cardList__item__action}>
                 {codeLink && (
-                    <a href={codeLink} className={C.homeSectionCard__content__list__item__action__btn} title="View Code">
-                        <Icon.Code className={C.homeSectionCard__content__list__item__action__icon} />
+                    <a href={codeLink} className={C.cardList__item__action__btn} target="_blank" rel="noopener noreferrer" title="View Code">
+                        <Icon.Code className={C.cardList__item__action__icon} />
                     </a>
                 )}
                 {demoLink && (
-                    <a href={demoLink} className={C.homeSectionCard__content__list__item__action__btn} title="View Demo">
-                        <Icon.GlobeAlt className={C.homeSectionCard__content__list__item__action__icon} />
+                    <a href={demoLink} className={C.cardList__item__action__btn} target="_blank" rel="noopener noreferrer" title="View Demo">
+                        <Icon.GlobeAlt className={C.cardList__item__action__icon} />
                     </a>
                 )}
             </div>
