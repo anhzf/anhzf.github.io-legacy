@@ -90,7 +90,7 @@ export function ContentListItem({
                     <Icon.Code className={C.homeSectionCard__content__list__item__action__icon}/>
                 </div>
                 <div className={C.homeSectionCard__content__list__item__action__btn} title="View Demo">
-                    <Icon.ExternalLink className={C.homeSectionCard__content__list__item__action__icon}/>
+                    <Icon.GlobeAlt className={C.homeSectionCard__content__list__item__action__icon}/>
                 </div>
             </div>
         </li>
