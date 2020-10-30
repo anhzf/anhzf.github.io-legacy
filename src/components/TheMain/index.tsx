@@ -1,5 +1,6 @@
 import React from 'react';
-import HomeSectionCard, * as HSC from './homeSectionCard';
+import HomeSectionCard from './homeSectionCard';
+import CardListItem from './CardList';
 import Button from '@/components/Button';
 import C from './classes';
 import { BtnModifier } from '../Button/classes';
@@ -7,16 +8,16 @@ import { BtnModifier } from '../Button/classes';
 export default function TheMain() {
     const featuredProjects = [
         {
-            content: 'Lakukampus',
-            href: 'https://lakukampus.id'
+            title: 'Lakukampus',
+            demoLink: 'https://lakukampus.id'
         },
         {
-            content: 'Code Highlighter',
-            href: 'https://anh-code-highlighter.web.app/'
+            title: 'Code Highlighter',
+            demoLink: 'https://anh-code-highlighter.web.app/'
         },
         {
-            content: 'Laravel RestAPI',
-            href: 'https://packagist.org/packages/anhzf/laravel-rest-api',
+            title: 'Laravel RestAPI',
+            demoLink: 'https://packagist.org/packages/anhzf/laravel-rest-api',
         },
     ].map(v => ({ ...v, target: '_blank' }))
 
@@ -31,7 +32,7 @@ export default function TheMain() {
                         <Button type={BtnModifier.strong} action="https://github.com/anhzf" externalLink>Visit Github Profile</Button>
                     </>)}
                 >
-                    <HSC.ContentList items={featuredProjects} />
+                    <CardListItem items={featuredProjects} />
                 </HomeSectionCard>
             </section>
 
