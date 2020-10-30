@@ -1,6 +1,8 @@
 import React from 'react';
 import HomeSectionCard, * as HSC from './homeSectionCard';
-import C, { ActionBtnModifier } from './classes';
+import Button from '@/components/Button';
+import C from './classes';
+import { BtnModifier } from '../Button/classes';
 
 export default function TheMain() {
     const featuredProjects = [
@@ -16,7 +18,7 @@ export default function TheMain() {
             content: 'Laravel RestAPI',
             href: 'https://packagist.org/packages/anhzf/laravel-rest-api',
         },
-    ].map(v => ({...v, target: '_blank'}))
+    ].map(v => ({ ...v, target: '_blank' }))
 
     return (
         <main className={C.main}>
@@ -25,8 +27,8 @@ export default function TheMain() {
                     title="Featured Projects"
                     colSpan={4}
                     actions={(<>
-                        <HSC.Action text="See other projects" type={ActionBtnModifier.medium} action="./" />
-                        <HSC.Action text="Visit Github Profile" type={ActionBtnModifier.strong} action="https://github.com/anhzf" externalLink />
+                        <Button type={BtnModifier.medium} action="./">See other projects</Button>
+                        <Button type={BtnModifier.strong} action="https://github.com/anhzf" externalLink>Visit Github Profile</Button>
                     </>)}
                 >
                     <HSC.ContentList items={featuredProjects} />

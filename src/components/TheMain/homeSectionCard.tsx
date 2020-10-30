@@ -1,14 +1,8 @@
 import * as React from 'react';
-import C, { ActionBtnModifier } from './classes';
+import { ButtonProps } from '@/components/Button';
+import C from './classes';
 import { joinClass } from '@/utils';
 import * as Icon from '@/components/icons';
-
-interface ActionProps {
-    text: string;
-    action: Function | string;
-    type?: ActionBtnModifier;
-    externalLink?: Boolean;
-}
 
 interface ActionsProps {
     children?: JSX.Element;
@@ -21,7 +15,7 @@ interface ContentListItemProps {
 
 interface ContentListProps {
     items: ContentListItemProps[]
-    actions?: ActionProps[]
+    actions?: ButtonProps[]
 }
 
 interface homeSectionCardProps {
@@ -105,30 +99,4 @@ export function Actions({
             {children}
         </div>
     )
-}
-
-export function Action({
-    text, action, type = ActionBtnModifier.default, externalLink = false
-}: ActionProps): JSX.Element {
-    const baseClass = C.homeSectionCard__action__btn;
-    const className = [baseClass, type].join(' ');
-
-    const clickInteraction =
-        typeof action === 'string' ?
-            { href: action } : { onClick: action };
-
-    return React.createElement(
-        typeof action === 'string' ?
-            'a' : 'button',
-        {
-            className,
-            ...(externalLink ?
-                { ...clickInteraction, target: '_blank' } : clickInteraction
-            )
-        },
-        (<>
-            {text}
-            { externalLink && <Icon.ExternalLink className="inline-block ml-1 h-4" />}
-        </>)
-    );
 }

@@ -1,9 +1,3 @@
-export enum ActionBtnModifier {
-    default = 'bg-transparent text-blue-500 hover:bg-gray-200 active:bg-gray-300',
-    medium = 'bg-transparent text-blue-500 border border-blue-600 hover:bg-gray-200 active:bg-gray-300',
-    strong = 'bg-gray-800 text-white hover:bg-gray-700 active:bg-gray-800',
-}
-
 const classStyle : {
     [key: string]: string
 } = {
@@ -23,7 +17,6 @@ const classStyle : {
     homeSectionCard__content__list__item__action__btn: 'flex-grow cursor-pointer m-0 w-full p-2 text-gray-600 flex justify-center items-center first:rounded-br-lg last:rounded-br-lg hover:bg-opacity-50 hover:bg-gray-300 active:bg-gray-400',
     homeSectionCard__content__list__item__action__icon: 'h-5',
     homeSectionCard__action: 'self-end mb-3 py-4 px-8 flex items-center gap-x-6',
-    homeSectionCard__action__btn: 'cursor-pointer py-2 px-5 rounded-full transition-colors duration-100 flex items-center',
 }
 
 export default classStyle;
