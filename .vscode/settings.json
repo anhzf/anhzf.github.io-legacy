@@ -4,6 +4,7 @@
     },
     "liveServer.settings.root": "/build",
     "conventionalCommits.scopes": [
-        "IDE"
+        "IDE",
+        "branding"
     ],
 }
