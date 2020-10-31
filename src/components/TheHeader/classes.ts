@@ -5,10 +5,10 @@ const classStyle : {
     
     navbar: 'w-full max-w-screen-lg my-0 mx-auto px-8 flex items-center',
     navbar__container: 'm-0 ml-auto h-full py-2 list-none flex justify-center items-center',
-    navbar__item: 'my-3 mx-2 py-1 px-4 font-poppins font-bold text-blue-400 uppercase rounded-full hover:bg-blue-400 hover:font-semibold hover:text-white transition-colors duration-75 ease-in',
+    navbar__item: 'my-3 mx-2 py-1 px-4 font-poppins font-bold text-blue-400 uppercase rounded-full hover:bg-blue-400 hover:text-white transition-colors duration-75 ease-in',
     
-    brand: 'font-extrabold text-4xl text-blue-500',
-    badge: 'cursor-pointer m-1 py-1 px-5 bg-blue-500 text-white font-normal rounded-full shadow-lg hover:bg-blue-600 hover:shadow-sm transition-colors transition-shadow duration-100 ease-in',
+    brand: 'font-montserrat font-extrabold text-4xl text-blue-500',
+    badge: 'cursor-pointer m-1 py-1 px-5 bg-blue-500 text-white font-normal rounded-full shadow-lg hover:bg-blue-600 hover:shadow-sm active:bg-blue-700 transition-colors transition-shadow duration-75 ease-in',
 
     headerBanner: 'h-full px-6 grid grid-cols-12 gap-x-16',
     headerBanner__photo: 'w-full self-end col-span-3 col-start-2',

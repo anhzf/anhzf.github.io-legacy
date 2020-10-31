@@ -6,6 +6,11 @@ interface TheHeaderProps {
     heroImg: string;
 }
 
+interface BadgeProps {
+    href?: string;
+    [index: string]: string | undefined;
+}
+
 export default function TheHeader({
     heroImg
 }: TheHeaderProps): JSX.Element {
@@ -15,23 +20,35 @@ export default function TheHeader({
             target: '#projects',
         },
         {
-            title: 'Education',
-            target: '#education',
-        },
-        {
             title: 'Contacts',
             target: '#contacts',
         },
         {
-            title: 'Teams Up',
-            target: '#teams-up',
+            title: 'Blogs',
+            target: '',
         },
     ];
 
-    const badges = [
-        'Fullstack Web Developer',
-        'Moslem Developer',
-        '✔ Follow Material Design Pattern',
+    const badges: BadgeProps[] = [
+        {
+            title: 'Moslem Developer',
+        },
+        {
+            title: 'Quasar',
+            href: 'https://quasar.dev/',
+        },
+        {
+            title: 'TailwindCSS',
+            href: 'https://tailwindcss.com/',
+        },
+        {
+            title: 'Vue',
+            href: 'https://vuejs.org/',
+        },
+        {
+            title: 'Laravel',
+            href: 'https://laravel.com/',
+        },
     ];
 
     return (
@@ -49,11 +66,26 @@ export default function TheHeader({
                     <h1 className={C.headerBanner__content__title2}>Alwan Nuha Zaky Fadhila</h1>
                     <div className={C.headerBanner__content__subtitle}>
                         {badges.map((badge, i) => (
-                            <span className={C.badge} key={`badge_${i}`}>{badge}</span>
+                            <Badge href={badge.href} key={`badge_${i}`}>{badge.title}</Badge>
                         ))}
                     </div>
                 </article>
             </section>
         </header>
     )
+}
+
+export function Badge({
+    children, href, ...attrs
+}: BadgeProps) {
+    const className = C.badge;
+    const withLink = href && ({
+        href, target: '_blank',
+    });
+
+    return React.createElement(
+        'a',
+        { className, ...withLink, ...attrs},
+        children
+    );
 }

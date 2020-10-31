@@ -1,9 +1,11 @@
 import React from 'react';
 import HomeSectionCard from './homeSectionCard';
 import CardListItem from './CardList';
+import TechStackImg from './TechStackImg';
 import Button from '@/components/Button';
 import C from './classes';
 import { BtnModifier } from '../Button/classes';
+import { joinClass } from '@/utils';
 
 export default function TheMain() {
     const featuredProjects = [
@@ -13,7 +15,8 @@ export default function TheMain() {
         },
         {
             title: 'Code Highlighter',
-            demoLink: 'https://anh-code-highlighter.web.app/'
+            demoLink: 'https://anh-code-highlighter.web.app/',
+            codeLink: 'https://github.com/anhzf/Code-Highlighter'
         },
         {
             title: 'Laravel RestAPI',
@@ -36,54 +39,16 @@ export default function TheMain() {
                 </HomeSectionCard>
             </section>
 
-            <section id="skills-and-experience" className={C.section}>
-                <HomeSectionCard
-                    title="Skills"
-                >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, nam dolores non libero officiis
-                    earum dolorem ratione, quo sunt suscipit, eaque eos sit distinctio beatae debitis voluptas velit rem
-                    vero repellat voluptate perferendis? Voluptatum magnam odit dolore beatae dignissimos error.
-                    Reiciendis esse odio nostrum architecto voluptates vitae, excepturi, ut minus quas blanditiis
-                    deserunt, dignissimos dolorum? Aliquam asperiores, suscipit beatae quibusdam enim quas saepe est
-                    possimus quo doloremque quisquam nobis sit voluptates temporibus excepturi aperiam obcaecati, dolor
-                    velit nulla! Ad ut eligendi aspernatur, reprehenderit a, quaerat eos sunt quis sit incidunt illum
-                    non illo minima unde possimus quos exercitationem
-                </HomeSectionCard>
-                <HomeSectionCard
-                    title="Experience"
-                >
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, nam dolores non libero officiis
-                    earum dolorem ratione, quo sunt suscipit, eaque eos sit distinctio beatae debitis voluptas velit rem
-                    vero repellat voluptate perferendis? Voluptatum magnam odit dolore beatae dignissimos error.
-                    Reiciendis esse odio nostrum architecto voluptates vitae, excepturi, ut minus quas blanditiis
-                    deserunt, dignissimos dolorum? Aliquam asperiores, suscipit beatae quibusdam enim quas saepe est
-                    possimus quo doloremque quisquam nobis sit voluptates temporibus excepturi aperiam obcaecati, dolor
-                    velit nulla! Ad ut eligendi aspernatur, reprehenderit a, quaerat eos sunt quis sit incidunt illum
-                    non illo minima unde possimus quos exercitationem
-                </HomeSectionCard>
-            </section>
-
-            <section className={C.section}>
-                <h1 className={C.homeSectionCard__title}>Top Web Technologies Used</h1>
-                <div className="home-section-card__contents featured" draggable="true">
-                    <div className="featured__item">
-                        <img src={require('../../assets/img/logo/quasar-logo.svg')} alt="" />
-                    </div>
-                    <div className="featured__item">
-                        <img src={require('../../assets/img/logo/vuetify-seeklogo.com.svg')} alt="" />
-                    </div>
-                    <div className="featured__item">
-                        <img src={require('../../assets/img/logo/laravel-logo.png')} alt="" />
-                    </div>
-                    <div className="featured__item">
-                        <img src={require('../../assets/img/logo/vuejs-seeklogo.com.svg')} alt="" />
-                    </div>
-                    <div className="featured__item">
-                        <img src={require('../../assets/img/logo/react-seeklogo.com.svg')} alt="" />
-                    </div>
-                    <div className="featured__item">
-                        <img src={require('../../assets/img/logo/express-js-seeklogo.com.svg')} alt="" />
-                    </div>
+            <section className={C.techStack}>
+                <h1 className={joinClass(C.homeSectionCard__title, C.techStack__title)}>Most Web Technologies Used</h1>
+                <div className={C.techStack__list} draggable="true">
+                    <TechStackImg src={require('@/assets/img/logo/quasar-logo.svg')} />
+                    <TechStackImg src={require('@/assets/img/logo/vuetify-seeklogo.com.svg')} />
+                    <TechStackImg src={require('@/assets/img/logo/tailwindcss.svg')} />
+                    <TechStackImg src={require('@/assets/img/logo/laravel-logo.png')} />
+                    <TechStackImg src={require('@/assets/img/logo/vuejs-seeklogo.com.svg')} />
+                    <TechStackImg src={require('@/assets/img/logo/react-seeklogo.com.svg')} />
+                    {/* <TechStackImg src={require('@/assets/img/logo/express-js-seeklogo.com.svg')} /> */}
                 </div>
             </section>
 

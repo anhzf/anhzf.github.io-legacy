@@ -42,9 +42,11 @@ export function CardListItem({
         <li className={C.cardList__item}>
             <article {...mergedAttrs}>
                 <h3 className={C.cardList__item__title}>{title}</h3>
-                <p className={C.cardList__item__desc}>
-                    {desc}
-                </p>
+                {desc && (
+                    <p className={C.cardList__item__desc}>
+                        {desc}
+                    </p>
+                )}
             </article>
             <div className={C.cardList__item__action}>
                 {codeLink && (
