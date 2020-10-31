@@ -1,5 +1,9 @@
+import { joinClass } from '@/utils';
 import * as React from 'react';
 import C from './classes';
+
+type titleAlign = 'text-left' | 'text-center' | 'text-right';
+type titleSize = 'text-2xl' | 'text-3xl' | 'text-4xl' | 'text-5xl';
 
 interface ActionsProps {
     children?: JSX.Element;
@@ -7,6 +11,8 @@ interface ActionsProps {
 
 interface homeSectionCardProps {
     title: string;
+    titleAlign?: titleAlign;
+    titleSize?: titleSize;
     children?: JSX.Element | string,
     colSpan?: number;
     colStart?: number;
@@ -14,7 +20,7 @@ interface homeSectionCardProps {
 }
 
 export default function HomeSectionCard({
-    title, children = '', actions, colSpan = 3, colStart = 0
+    title, titleAlign = 'text-left', titleSize='text-2xl', children = '', actions, colSpan = 3, colStart = 0
 }: homeSectionCardProps): JSX.Element {
 
     const baseClass = C.homeSectionCard;
@@ -25,7 +31,7 @@ export default function HomeSectionCard({
 
     return (
         <div className={classes}>
-            <h1 className={C.homeSectionCard__title}>{title}</h1>
+            <h1 className={joinClass(C.homeSectionCard__title, titleAlign, titleSize)}>{title}</h1>
             <div className={C.homeSectionCard__content}>
                 {children}
             </div>

@@ -3,6 +3,7 @@ import HomeSectionCard from './homeSectionCard';
 import CardListItem from './CardList';
 import TechStackImg from './TechStackImg';
 import Button from '@/components/Button';
+import { StatsCard, TopLangsCard } from '@/components/GithubReadmeStats';
 import C from './classes';
 import { BtnModifier } from '../Button/classes';
 import { joinClass } from '@/utils';
@@ -50,6 +51,33 @@ export default function TheMain() {
                     <TechStackImg src={require('@/assets/img/logo/react-seeklogo.com.svg')} />
                     {/* <TechStackImg src={require('@/assets/img/logo/express-js-seeklogo.com.svg')} /> */}
                 </div>
+            </section>
+
+            <section className={C.section}>
+                <HomeSectionCard
+                    title="Developer Activities"
+                    titleAlign="text-center"
+                    titleSize="text-3xl"
+                    colSpan={6}
+                    colStart={2}
+                >
+                    <div className="pt-8 pb-16 flex flex-wrap justify-evenly items-start">
+                        <StatsCard
+                            username="anhzf"
+                            count_private show_icons hide_border hide_title
+                        />
+                        <TopLangsCard
+                            username="anhzf"
+                            layout="compact"
+                            hide_border
+                            langs_count={6}
+                        />
+                        {/* <WakaTimeCard
+                            username="Anhzf"
+                            hide_border
+                        /> */}
+                    </div>
+                </HomeSectionCard>
             </section>
 
             <section className={C.section}>
