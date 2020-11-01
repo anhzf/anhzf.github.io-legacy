@@ -9,28 +9,25 @@ interface ActionsProps {
     children?: JSX.Element;
 }
 
-interface homeSectionCardProps {
+interface homeSectionCardProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     titleAlign?: titleAlign;
     titleSize?: titleSize;
     children?: JSX.Element | string,
-    colSpan?: number;
-    colStart?: number;
     actions?: ActionsProps['children'];
 }
 
 export default function HomeSectionCard({
-    title, titleAlign = 'text-left', titleSize='text-2xl', children = '', actions, colSpan = 3, colStart = 0
+    title, titleAlign = 'text-left', titleSize='text-2xl', children, actions, className, ...attrs
 }: homeSectionCardProps): JSX.Element {
 
     const baseClass = C.homeSectionCard;
-    const gridColSpan = `col-span-${colSpan}`;
-    const gridColStart = colStart && `col-start-${colStart}`;
-    const classes = [baseClass, 'p-b-xl', gridColStart, gridColSpan].join(' ');
-
+    const defaultGridColSpan = 'col-span-3';
+    const defaultGridColStart = 'col-start-1';
+    const classes = joinClass(baseClass, 'p-b-xl', defaultGridColSpan, defaultGridColStart, className ?? '');
 
     return (
-        <div className={classes}>
+        <div className={joinClass(classes)} {...attrs}>
             <h1 className={joinClass(C.homeSectionCard__title, titleAlign, titleSize)}>{title}</h1>
             <div className={C.homeSectionCard__content}>
                 {children}

@@ -28,10 +28,10 @@ export default function TheMain() {
 
     return (
         <main className={C.main}>
-            <section id="projects" className={C.section}>
+            <section id="projects" className={joinClass(C.section)}>
                 <HomeSectionCard
                     title="Featured Projects"
-                    colSpan={4}
+                    className="col-span-4"
                     actions={(<>
                         <Button type={BtnModifier.medium} action="./">See other projects</Button>
                         <Button type={BtnModifier.strong} action="https://github.com/anhzf" externalLink>Visit Github Profile</Button>
@@ -89,8 +89,7 @@ export default function TheMain() {
                     title="Developer Activities"
                     titleAlign="text-center"
                     titleSize="text-3xl"
-                    colSpan={6}
-                    colStart={2}
+                    className="col-span-6 xl:col-start-2 col-start-1"
                 >
                     <div className="pt-8 pb-16 flex flex-wrap justify-evenly items-start">
                         <StatsCard
@@ -111,7 +110,7 @@ export default function TheMain() {
                 </HomeSectionCard>
             </section>
 
-            <section className={joinClass(C.techStack, 'col-start-2', 'col-span-10')}>
+            <section className={joinClass(C.techStack, 'xl:col-start-2 col-start-1 xl:col-span-10 col-span-12')}>
                 <h1 className={joinClass(C.homeSectionCard__title, 'text-3xl')}>Organizations</h1>
                 <div className={C.techStack__list} draggable="true">
                     <TechStackImg
@@ -138,8 +137,7 @@ export default function TheMain() {
             <section className={C.section}>
                 <HomeSectionCard
                     title="Contact Me"
-                    colSpan={4}
-                    colStart={2}
+                    className="xl:col-span-4 col-span-6 xl:col-start-2 col-start-1"
                 >
                     <div className="py-8 grid grid-cols-2 items-center gap-y-6">
                         <a className={C.socialMedia} href="https://github.com/anhzf" target="_blank" rel="noopener noreferrer">
