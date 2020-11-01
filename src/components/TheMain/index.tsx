@@ -3,6 +3,7 @@ import HomeSectionCard from './homeSectionCard';
 import CardListItem from './CardList';
 import TechStackImg from './TechStackImg';
 import Button from '@/components/Button';
+import * as Icon from '@/components/icons';
 import { StatsCard, TopLangsCard } from '@/components/GithubReadmeStats';
 import C from './classes';
 import { BtnModifier } from '../Button/classes';
@@ -137,16 +138,36 @@ export default function TheMain() {
             <section className={C.section}>
                 <HomeSectionCard
                     title="Contact Me"
-                    colSpan={6}
+                    colSpan={4}
+                    colStart={2}
                 >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam soluta autem deleniti consequatur
-                    sunt perspiciatis, sapiente minima a ad necessitatibus officiis voluptate nesciunt nemo aperiam
-                    dolorem fuga facere reiciendis doloribus excepturi libero eaque itaque hic natus. Fuga itaque
-                    adipisci eius rem saepe vero distinctio quod! Quasi molestias hic dolorem ipsum iste enim laboriosam
-                    necessitatibus laborum omnis velit. Eveniet et, neque tempora dolorem incidunt porro eos? Minus
-                    voluptas odio vitae incidunt provident in minima, totam ipsa tempora a consectetur, iusto sed
-                    asperiores veritatis fuga consequatur modi nam ratione eveniet cum! Quam pariatur, neque autem enim
-                    in sapiente officia reiciendis aperiam voluptas!
+                    <div className="py-8 grid grid-cols-2 items-center gap-y-6">
+                        <a className={C.socialMedia} href="https://github.com/anhzf" target="_blank" rel="noopener noreferrer">
+                            <Icon.Github className={C.socialMedia__icon} />
+                            <span>anhzf</span>
+                            <Icon.ExternalLink className={C.socialMedia__openInNew} />
+                        </a>
+                        <a className={C.socialMedia} href="https://www.instagram.com/alwan.nuha" target="_blank" rel="noopener noreferrer">
+                            <Icon.Instagram className={C.socialMedia__icon} />
+                            <span>@alwan.nuha</span>
+                            <Icon.ExternalLink className={C.socialMedia__openInNew} />
+                        </a>
+                        <a className={C.socialMedia} href="mailto:alwan.nuha7@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <Icon.Mail className={C.socialMedia__icon} />
+                            <span>alwan.nuha7@gmail.com</span>
+                            <Icon.ExternalLink className={C.socialMedia__openInNew} />
+                        </a>
+                        <a className={C.socialMedia} href="https://facebook.com/100002806994728" target="_blank" rel="noopener noreferrer">
+                            <Icon.Facebook className={C.socialMedia__icon} />
+                            <span>Alwan Nuha</span>
+                            <Icon.ExternalLink className={C.socialMedia__openInNew} />
+                        </a>
+                        <a className={C.socialMedia} href="https://wa.me/6285156348055" target="_blank" rel="noopener noreferrer">
+                            <Icon.Whatsapp className={C.socialMedia__icon} />
+                            <span>+6285156348055</span>
+                            <Icon.ExternalLink className={C.socialMedia__openInNew} />
+                        </a>
+                    </div>
                 </HomeSectionCard>
             </section>
         </main>

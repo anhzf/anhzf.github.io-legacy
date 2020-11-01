@@ -27,6 +27,10 @@ const classStyle : {
     
     devSection: 'col-span-12 mb-24 grid grid-cols-6 gap-x-12 last:mb-0',
     devSection__title: 'mx-10 mt-6 mb-1 font-bold text-center text-gray-800 text-4xl',
+
+    socialMedia: 'group relative px-2 py-4 rounded-md hover:bg-gray-300 hover:bg-opacity-75',
+    socialMedia__icon: 'inline-block mx-4 h-8 text-gray-800',
+    socialMedia__openInNew: 'invisible absolute right-0 top-0 h-4 text-gray-800 transform translate-y-1/2 -translate-x-1/2 group-hover:visible',
 }
 
 export default classStyle;
