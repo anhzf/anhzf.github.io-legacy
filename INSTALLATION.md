@@ -1,6 +1,9 @@
 ## Live Website
 http://anhzf.github.io/
 
+## Link Repository
+https://github.com/anhzf/anhzf.github.io
+
 ## Langkah untuk menjalankan/membuka web
 ### _Sebelum memulai pastikan sudah terinstall berikut ini_
 - [NODE.JS + NPM](https://nodejs.org/)
