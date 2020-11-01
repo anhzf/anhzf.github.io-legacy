@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.e4b9ef87.chunk.css",
-    "main.js": "/static/js/main.ed089575.chunk.js",
-    "main.js.map": "/static/js/main.ed089575.chunk.js.map",
+    "main.css": "/static/css/main.2fca699e.chunk.css",
+    "main.js": "/static/js/main.33e84488.chunk.js",
+    "main.js.map": "/static/js/main.33e84488.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.7c81737f.chunk.js": "/static/js/2.7c81737f.chunk.js",
-    "static/js/2.7c81737f.chunk.js.map": "/static/js/2.7c81737f.chunk.js.map",
+    "static/js/2.f38ce97e.chunk.js": "/static/js/2.f38ce97e.chunk.js",
+    "static/js/2.f38ce97e.chunk.js.map": "/static/js/2.f38ce97e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.28776490049e975bb2f0bc860fc1882c.js": "/precache-manifest.28776490049e975bb2f0bc860fc1882c.js",
+    "precache-manifest.140eba9402182b11de6db74443482ec2.js": "/precache-manifest.140eba9402182b11de6db74443482ec2.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.e4b9ef87.chunk.css.map": "/static/css/main.e4b9ef87.chunk.css.map",
-    "static/js/2.7c81737f.chunk.js.LICENSE.txt": "/static/js/2.7c81737f.chunk.js.LICENSE.txt",
-    "static/media/express-js-seeklogo.com.svg": "/static/media/express-js-seeklogo.com.14f17407.svg",
+    "static/css/main.2fca699e.chunk.css.map": "/static/css/main.2fca699e.chunk.css.map",
+    "static/js/2.f38ce97e.chunk.js.LICENSE.txt": "/static/js/2.f38ce97e.chunk.js.LICENSE.txt",
+    "static/media/LOGO_ALIF.png": "/static/media/LOGO_ALIF.82aea3b9.png",
+    "static/media/bbid.png": "/static/media/bbid.2370e85f.png",
+    "static/media/bem_uns.png": "/static/media/bem_uns.68681f22.png",
     "static/media/laravel-logo.png": "/static/media/laravel-logo.58846d40.png",
     "static/media/my-removebg-preview.png": "/static/media/my-removebg-preview.3b2acc79.png",
-    "static/media/quasar-logo.svg": "/static/media/quasar-logo.2a0f406e.svg",
+    "static/media/quasar-logo.svg": "/static/media/quasar-logo.e8bf1914.svg",
     "static/media/react-seeklogo.com.svg": "/static/media/react-seeklogo.com.2bc32987.svg",
+    "static/media/tailwindcss.svg": "/static/media/tailwindcss.b244bce2.svg",
     "static/media/vuejs-seeklogo.com.svg": "/static/media/vuejs-seeklogo.com.c27f74e4.svg",
     "static/media/vuetify-seeklogo.com.svg": "/static/media/vuetify-seeklogo.com.ac01305c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.7c81737f.chunk.js",
-    "static/css/main.e4b9ef87.chunk.css",
-    "static/js/main.ed089575.chunk.js"
+    "static/js/2.f38ce97e.chunk.js",
+    "static/css/main.2fca699e.chunk.css",
+    "static/js/main.33e84488.chunk.js"
   ]
 }
