@@ -1,31 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "94ecc0e85adf5e70ceb0525ecf6d8ba8",
+    "revision": "e696b582475a6c36b2c9444d72808b06",
     "url": "/index.html"
   },
   {
-    "revision": "0d22657b2fbe7b85d81b",
-    "url": "/static/css/main.e4b9ef87.chunk.css"
+    "revision": "19901a48e57158367872",
+    "url": "/static/css/main.2fca699e.chunk.css"
   },
   {
-    "revision": "66ce35d2b01fac9a2e45",
-    "url": "/static/js/2.7c81737f.chunk.js"
+    "revision": "4e0b53694ffcefd0983a",
+    "url": "/static/js/2.f38ce97e.chunk.js"
   },
   {
     "revision": "570d362d673dab785e62d2b8563e1118",
-    "url": "/static/js/2.7c81737f.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.f38ce97e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0d22657b2fbe7b85d81b",
-    "url": "/static/js/main.ed089575.chunk.js"
+    "revision": "19901a48e57158367872",
+    "url": "/static/js/main.33e84488.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
   },
   {
-    "revision": "14f1740773bc43337d5d6665823f90b1",
-    "url": "/static/media/express-js-seeklogo.com.14f17407.svg"
+    "revision": "82aea3b9d69b224d677de9f208542403",
+    "url": "/static/media/LOGO_ALIF.82aea3b9.png"
+  },
+  {
+    "revision": "2370e85f8dd248fa3c1b0e24d42b062b",
+    "url": "/static/media/bbid.2370e85f.png"
+  },
+  {
+    "revision": "68681f22a10599cf50845d5b675a5efc",
+    "url": "/static/media/bem_uns.68681f22.png"
   },
   {
     "revision": "58846d405c81eb0c6023eac61d379664",
@@ -36,12 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/my-removebg-preview.3b2acc79.png"
   },
   {
-    "revision": "2a0f406ec750bc0211c16ac13b98a1f3",
-    "url": "/static/media/quasar-logo.2a0f406e.svg"
+    "revision": "e8bf191464cc6cd59cfa6b2807c00926",
+    "url": "/static/media/quasar-logo.e8bf1914.svg"
   },
   {
     "revision": "2bc32987b9a9efbbeff8e9047f28f235",
     "url": "/static/media/react-seeklogo.com.2bc32987.svg"
+  },
+  {
+    "revision": "b244bce2942814970f926364d485e8f7",
+    "url": "/static/media/tailwindcss.b244bce2.svg"
   },
   {
     "revision": "c27f74e48e2b0b63cbbb52088c6cc1e1",
