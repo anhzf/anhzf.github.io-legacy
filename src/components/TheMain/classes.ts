@@ -21,8 +21,9 @@ const classStyle : {
     
     techStack: 'col-span-12 mb-24 h-screen flex flex-col justify-evenly',
     techStack__title: 'self-center m-0 text-5xl',
-    techStack__list: 'overflow-x-auto px-8 flex items-center gap-x-16',
-    techStack__item: 'w-64 h-64 bg-no-repeat bg-center bg-contain',
+    techStack__list: 'overflow-x-auto px-16 pb-32 flex items-center gap-x-16',
+    techStack__item: 'hover:bg-opacity-25 hover:bg-blue-300',
+    techStack__item__img: 'w-64 h-64 bg-no-repeat bg-center bg-contain',
     
     devSection: 'col-span-12 mb-24 grid grid-cols-6 gap-x-12 last:mb-0',
     devSection__title: 'mx-10 mt-6 mb-1 font-bold text-center text-gray-800 text-4xl',
