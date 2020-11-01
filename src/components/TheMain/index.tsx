@@ -21,6 +21,10 @@ export default function TheMain() {
             codeLink: 'https://github.com/anhzf/Code-Highlighter'
         },
         {
+            title: 'Semar Apps BEM UNS',
+            demoLink: 'http://apps.bemuns.com/',
+        },
+        {
             title: 'Laravel RestAPI',
             demoLink: 'https://packagist.org/packages/anhzf/laravel-rest-api',
         },
@@ -31,7 +35,7 @@ export default function TheMain() {
             <section id="projects" className={joinClass(C.section)}>
                 <HomeSectionCard
                     title="Featured Projects"
-                    className="col-span-4"
+                    className="lg:col-span-4 col-span-6"
                     actions={(<>
                         <Button type={BtnModifier.medium} action="./">See other projects</Button>
                         <Button type={BtnModifier.strong} action="https://github.com/anhzf" externalLink>Visit Github Profile</Button>

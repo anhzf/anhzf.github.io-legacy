@@ -1,7 +1,7 @@
 const classStyle = {
     main: 'grid grid-cols-12',
 
-    section: 'lg:mx-0 mx-4 col-start-1 lg:col-start-2 col-span-10 mb-24 grid grid-cols-6 gap-x-12 last:mb-0',
+    section: 'lg:mx-0 mx-4 lg:col-span-10 col-span-12 lg:col-start-2 col-start-1 mb-24 grid grid-cols-6 gap-x-12 last:mb-0',
     
     homeSectionCard: 'bg-white rounded-xl shadow-2xl flex flex-col',
     homeSectionCard__title: 'mx-10 mt-6 mb-1 font-poppins font-bold text-gray-800',
@@ -18,7 +18,7 @@ const classStyle = {
     cardList__item__action__icon: 'h-5',
     
     techStack: 'col-span-12 mb-24 h-screen flex flex-col justify-evenly',
-    techStack__title: 'self-center m-0 text-5xl',
+    techStack__title: 'self-center m-0 text-center lg:text-5xl text-4xl',
     techStack__list: 'overflow-x-auto px-16 pb-32 flex items-center gap-x-16',
     techStack__item: 'hover:bg-opacity-25 hover:bg-blue-300',
     techStack__item__img: 'w-64 h-64 bg-no-repeat bg-center bg-contain',
