@@ -7,7 +7,7 @@ export enum BtnModifier {
 const classStyle: {
     [key: string]: string
 } = {
-    btn: 'cursor-pointer xl:py-2 lg:py-1 px-5 rounded-full transition-colors duration-100 flex items-center',
+    btn: 'cursor-pointer xl:py-2 md:py-1 py-2 md:px-5 px-3 md:text-md sm:text-sm text-xs truncate rounded-full transition-colors duration-100 flex items-center',
 }
 
 export default classStyle;

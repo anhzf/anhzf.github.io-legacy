@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as Icons from '@/components/icons';
 import C from './classes';
 
 export interface navItem {
@@ -22,6 +23,8 @@ export default function navItems({
                 </a>
 
             ))}
+            
+            <Icons.Menu className={C.navbar__hamburger} />
         </ul>
     )
 }

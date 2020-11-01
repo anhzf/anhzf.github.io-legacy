@@ -32,7 +32,7 @@ export default function TheMain() {
 
     return (
         <main className={C.main}>
-            <section id="projects" className={joinClass(C.section)}>
+            <section id="projects" className={C.section}>
                 <HomeSectionCard
                     title="Featured Projects"
                     className="lg:col-span-4 col-span-6"
@@ -95,7 +95,7 @@ export default function TheMain() {
                     titleSize="text-3xl"
                     className="col-span-6 xl:col-start-2 col-start-1"
                 >
-                    <div className="pt-8 pb-16 flex flex-wrap justify-evenly items-start">
+                    <div className="md:pt-8 md:pb-16 flex flex-wrap justify-evenly items-start">
                         <StatsCard
                             username="anhzf"
                             count_private show_icons hide_border hide_title
@@ -138,12 +138,12 @@ export default function TheMain() {
                 </div>
             </section>
 
-            <section className={C.section}>
+            <section id="contacts" className={C.section}>
                 <HomeSectionCard
                     title="Contact Me"
                     className="xl:col-span-4 col-span-6 xl:col-start-2 col-start-1"
                 >
-                    <div className="py-8 grid grid-cols-2 items-center gap-y-6">
+                    <div className="md:py-8 py-4 grid grid-cols-2 items-center gap-y-6">
                         <a className={C.socialMedia} href="https://github.com/anhzf" target="_blank" rel="noopener noreferrer">
                             <Icon.Github className={C.socialMedia__icon} />
                             <span>anhzf</span>
@@ -164,7 +164,7 @@ export default function TheMain() {
                             <span>Alwan Nuha</span>
                             <Icon.ExternalLink className={C.socialMedia__openInNew} />
                         </a>
-                        <a className={C.socialMedia} href="https://wa.me/6285156348055" target="_blank" rel="noopener noreferrer">
+                        <a className={joinClass(C.socialMedia, 'text-xs')} href="https://wa.me/6285156348055" target="_blank" rel="noopener noreferrer">
                             <Icon.Whatsapp className={C.socialMedia__icon} />
                             <span>+6285156348055</span>
                             <Icon.ExternalLink className={C.socialMedia__openInNew} />
