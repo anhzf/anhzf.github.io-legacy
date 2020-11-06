@@ -141,9 +141,9 @@ export default function TheMain() {
             <section id="contacts" className={C.section}>
                 <HomeSectionCard
                     title="Contact Me"
-                    className="xl:col-span-4 col-span-6 xl:col-start-2 col-start-1"
+                    className="xl:col-span-4 col-span-6 xl:col-start-2 col-start-1 rounded-b-none"
                 >
-                    <div className="md:py-8 py-4 grid grid-cols-2 items-center gap-y-6">
+                    <div className={C.socialMedia__list}>
                         <a className={C.socialMedia} href="https://github.com/anhzf" target="_blank" rel="noopener noreferrer">
                             <Icon.Github className={C.socialMedia__icon} />
                             <span>anhzf</span>
