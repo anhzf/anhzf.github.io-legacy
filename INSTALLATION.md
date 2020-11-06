@@ -30,3 +30,7 @@ https://github.com/anhzf/anhzf.github.io
      ```bash
      npm run cr:build
      ```
+     Kemudian dijalankan dengan menggunakan live server / dengan menggunakan command berikut:
+     ```bash
+     npm run serve
+     ```
