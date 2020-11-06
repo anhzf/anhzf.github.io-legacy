@@ -23,8 +23,8 @@ const classStyle = {
     techStack__item: 'hover:bg-opacity-25 hover:bg-blue-300',
     techStack__item__img: 'lg:w-64 sm:w-48 w-40 lg:h-64 sm:h-48 h-40 bg-no-repeat bg-center bg-contain',
     
-    socialMedia: 'group relative mx-4 md:px-2 px-1 md:py-4 py-2 md:text-base text-sm border border-gray-300 rounded-md hover:bg-gray-300 hover:bg-opacity-75',
-    socialMedia__list: 'md:py-8 py-4 grid grid-cols-2 items-center gap-y-6',
+    socialMedia: 'group relative sm:mx-4 md:px-2 px-1 py-4 md:text-base text-sm border border-gray-300 rounded-md hover:bg-gray-300 hover:bg-opacity-75',
+    socialMedia__list: 'md:pt-8 pt-4 md:pb-4 pb-2 grid lg:grid-cols-2 grid-cols-1 items-center md:gapy-y-6 sm:gap-y-4 gap-y-2',
     socialMedia__icon: 'inline-block md:mx-4 mx-2 md:h-8 h-6 text-gray-800',
     socialMedia__openInNew: 'invisible absolute right-0 top-0 h-4 text-gray-800 transform translate-y-1/2 -translate-x-1/2 group-hover:visible',
 } as const;
