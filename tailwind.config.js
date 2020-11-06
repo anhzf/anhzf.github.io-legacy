@@ -295,9 +295,6 @@ module.exports = {
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
       montserrat: ['Montserrat', ...defaultTheme.fontFamily.sans],
-      roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
-      poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
-      epilogue: ['Epilogue', ...defaultTheme.fontFamily.sans],
     },
     fontSize: {
       xs: '0.75rem',
